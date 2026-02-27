@@ -233,4 +233,5 @@ npm run dev
 
 ## 📜 License
 
-MIT License — Built for Kazakhstan AI Hackathon 2024
+MIT License — Built for Kazakhstan AI Hackathon 2026
+
