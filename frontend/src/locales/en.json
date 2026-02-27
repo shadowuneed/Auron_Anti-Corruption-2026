@@ -1,0 +1,161 @@
+{
+  "app": {
+    "title": "AURON",
+    "subtitle": "AI Anti-Corruption System",
+    "description": "AI-Powered Detection of Manipulative Specifications in Government Procurement"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "network": "Network Graph",
+    "map": "Flow Map",
+    "entities": "Organizations / Companies",
+    "persons": "Individuals",
+    "voice": "Voice AI",
+    "investigations": "Investigations",
+    "analyze": "Analyze Tender",
+    "tenders": "Tender Database",
+    "analytics": "Analytics",
+    "about": "About"
+  },
+  "settings": {
+    "language": "Language",
+    "theme": "Theme",
+    "lightMode": "Light",
+    "darkMode": "Dark"
+  },
+  "network": {
+    "title": "Financial Network Graph"
+  },
+  "map": {
+    "title": "Money Flow Map"
+  },
+  "dashboard": {
+    "title": "Risk Overview",
+    "totalTenders": "Total Tenders",
+    "analyzedTenders": "Analyzed",
+    "highRisk": "High Risk",
+    "critical": "Critical",
+    "valueAtRisk": "Value at Risk",
+    "avgRiskScore": "Avg Risk Score",
+    "singleBidRate": "Single-Bid Rate",
+    "riskDistribution": "Risk Distribution",
+    "topRiskyRegions": "Top Risky Regions",
+    "topRiskyCustomers": "Top Risky Customers",
+    "monthlyTrends": "Monthly Risk Trends",
+    "commonFlags": "Most Common Red Flags",
+    "recentHighRisk": "Recent High-Risk Tenders",
+    "riskMap": "Kazakhstan Risk Heatmap"
+  },
+  "analyze": {
+    "title": "Tender Risk Analysis",
+    "subtitle": "Paste tender text or enter tender ID to detect manipulation",
+    "placeholder": "Paste the full technical specification text here...",
+    "tenderIdPlaceholder": "Enter tender ID (e.g., GZ-2024-10001)",
+    "analyzeBtn": "Analyze",
+    "analyzing": "Analyzing...",
+    "riskScore": "Risk Score",
+    "riskLevel": "Risk Level",
+    "confidence": "Confidence",
+    "processingTime": "Processing Time",
+    "triggeredFlags": "Triggered Risk Flags",
+    "recommendation": "Recommendation",
+    "evidence": "Evidence",
+    "noFlags": "No risk flags triggered",
+    "amount": "Contract Amount (KZT)",
+    "deliveryDays": "Delivery Days",
+    "region": "Region",
+    "customerName": "Customer Name"
+  },
+  "tenders": {
+    "title": "Tender Database",
+    "subtitle": "Browse and filter analyzed tenders",
+    "search": "Search tenders...",
+    "filterRisk": "Filter by Risk",
+    "filterRegion": "Filter by Region",
+    "all": "All",
+    "tenderId": "Tender ID",
+    "tenderTitle": "Title",
+    "customer": "Customer",
+    "amount": "Amount (KZT)",
+    "region": "Region",
+    "riskScore": "Risk Score",
+    "riskLevel": "Risk Level",
+    "participants": "Participants",
+    "date": "Date",
+    "viewDetails": "View Details",
+    "noResults": "No tenders found"
+  },
+  "analytics": {
+    "title": "Analytics & Insights",
+    "subtitle": "Deep analysis of procurement corruption patterns",
+    "riskByCategory": "Risk by Industry Category",
+    "riskByRegion": "Risk by Region",
+    "flagDistribution": "Flag Type Distribution",
+    "trendAnalysis": "Risk Trend Analysis",
+    "repeatWinners": "Repeat Winner Patterns",
+    "competitionLevel": "Competition Level Analysis"
+  },
+  "detail": {
+    "tenderDetails": "Tender Details",
+    "riskAnalysis": "Risk Analysis",
+    "documentText": "Document Text",
+    "customerProfile": "Customer Profile",
+    "similarCases": "Similar Cases",
+    "flags": "Risk Flags",
+    "winner": "Winner",
+    "deliveryTime": "Delivery Time",
+    "days": "days",
+    "category": "Category",
+    "status": "Status",
+    "publishedOn": "Published On",
+    "suspiciousText": "Suspicious text fragments are highlighted in red"
+  },
+  "about": {
+    "title": "About TechnoFilter",
+    "mission": "Our Mission",
+    "missionText": "TechnoFilter is an AI-powered system designed to detect manipulative and corruption-driven technical specifications in government procurement tenders in Kazakhstan.",
+    "problem": "The Problem",
+    "problemText": "Government procurement in Kazakhstan amounts to approximately 5 trillion tenge annually. A significant portion of tenders contain specifications deliberately crafted to favor a single pre-selected vendor, eliminating fair competition.",
+    "solution": "Our Solution",
+    "solutionText": "Using advanced AI algorithms, natural language processing, and pattern recognition, TechnoFilter automatically analyzes tender documents and flags suspicious specifications that may indicate corruption.",
+    "howItWorks": "How It Works",
+    "step1": "Data Collection — Tenders are collected from goszakup.gov.kz",
+    "step2": "AI Analysis — Our ML engine extracts risk signals from tender text",
+    "step3": "Risk Scoring — Each tender receives a composite risk score (0-100)",
+    "step4": "Flag Generation — Specific red flags are identified with evidence",
+    "step5": "Review — Analysts review high-risk cases for further action",
+    "team": "Team",
+    "techStack": "Technology Stack",
+    "impact": "Expected Impact",
+    "impactText": "By automating the detection of suspicious procurement patterns, TechnoFilter can help save billions of tenge in public funds and promote fair competition in government procurement."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "export": "Export",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "kzt": "KZT",
+    "billion": "B",
+    "million": "M",
+    "thousand": "K"
+  },
+  "risk": {
+    "LOW": "Low",
+    "MEDIUM": "Medium",
+    "HIGH": "High",
+    "CRITICAL": "Critical"
+  },
+  "flags": {
+    "BRAND_LOCK": "Brand Lock",
+    "TIMELINE": "Timeline",
+    "CERTIFICATION": "Certification",
+    "FINANCIAL": "Financial",
+    "REPEAT_WINNER": "Repeat Winner",
+    "SINGLE_BID": "Single Bid",
+    "LINGUISTIC": "Linguistic"
+  }
+}

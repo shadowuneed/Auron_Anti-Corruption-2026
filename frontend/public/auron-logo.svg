@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <rect width="120" height="120" fill="#1e1b4b" rx="10"/>
+
+  <!-- Outer axis-aligned square -->
+  <rect x="22" y="22" width="76" height="76" fill="none" stroke="#4dc9f0" stroke-width="1.6"/>
+
+  <!-- Diamond (rotated 45°), vertices N/E/S/W -->
+  <polygon points="60,7 113,60 60,113 7,60" fill="none" stroke="#4dc9f0" stroke-width="1.6"/>
+
+  <!-- Corner-to-vertex connecting lines (makes the 8-pointed web) -->
+  <line x1="22" y1="22" x2="60" y2="7"   stroke="#4dc9f0" stroke-width="1.2"/>
+  <line x1="22" y1="22" x2="7"  y2="60"  stroke="#4dc9f0" stroke-width="1.2"/>
+  <line x1="98" y1="22" x2="60" y2="7"   stroke="#4dc9f0" stroke-width="1.2"/>
+  <line x1="98" y1="22" x2="113" y2="60" stroke="#4dc9f0" stroke-width="1.2"/>
+  <line x1="98" y1="98" x2="113" y2="60" stroke="#4dc9f0" stroke-width="1.2"/>
+  <line x1="98" y1="98" x2="60" y2="113" stroke="#4dc9f0" stroke-width="1.2"/>
+  <line x1="22" y1="98" x2="7"  y2="60"  stroke="#4dc9f0" stroke-width="1.2"/>
+  <line x1="22" y1="98" x2="60" y2="113" stroke="#4dc9f0" stroke-width="1.2"/>
+
+  <!-- Crosshair through full height/width -->
+  <line x1="60" y1="7"   x2="60" y2="113" stroke="#4dc9f0" stroke-width="1.2"/>
+  <line x1="7"  y1="60"  x2="113" y2="60" stroke="#4dc9f0" stroke-width="1.2"/>
+
+  <!-- Diagonal cross lines (corner to corner of outer square) -->
+  <line x1="22" y1="22" x2="98" y2="98" stroke="#4dc9f0" stroke-width="0.9" opacity="0.55"/>
+  <line x1="98" y1="22" x2="22" y2="98" stroke="#4dc9f0" stroke-width="0.9" opacity="0.55"/>
+
+  <!-- Concentric circles (radar/target) -->
+  <circle cx="60" cy="60" r="7"  fill="none" stroke="#4dc9f0" stroke-width="0.9" opacity="0.45"/>
+  <circle cx="60" cy="60" r="14" fill="none" stroke="#4dc9f0" stroke-width="0.9" opacity="0.5"/>
+  <circle cx="60" cy="60" r="21" fill="none" stroke="#4dc9f0" stroke-width="0.9" opacity="0.6"/>
+  <circle cx="60" cy="60" r="28" fill="none" stroke="#4dc9f0" stroke-width="0.9" opacity="0.7"/>
+  <circle cx="60" cy="60" r="35" fill="none" stroke="#4dc9f0" stroke-width="1"   opacity="0.85"/>
+</svg>

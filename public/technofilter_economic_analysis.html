@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechnoFilter — Полный анализ проекта</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.7;
+    }
+    .page {
+      max-width: 860px;
+      margin: 36px auto;
+      padding: 0 16px 48px;
+    }
+    h1 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #2563eb;
+    }
+    .section-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #94a3b8;
+      margin: 28px 0 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+    .numbered-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #e2e8f0;
+      margin: 22px 0 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      margin-bottom: 4px;
+    }
+    thead tr { background: #1e3a8a; }
+    thead th {
+      padding: 10px 16px;
+      text-align: left;
+      font-weight: 600;
+      color: #fff;
+    }
+    tbody tr { background: #1e293b; }
+    tbody tr:nth-child(even) { background: #172033; }
+    td {
+      padding: 9px 16px;
+      border-bottom: 1px solid #334155;
+      color: #cbd5e1;
+    }
+    td strong, td b { color: #fff; }
+    tbody tr:last-child td { border-bottom: none; }
+    ul {
+      background: #1e293b;
+      border-radius: 6px;
+      padding: 14px 20px 14px 36px;
+      margin-bottom: 4px;
+    }
+    ul li {
+      font-size: 13.5px;
+      color: #cbd5e1;
+      margin-bottom: 6px;
+    }
+    ul li:last-child { margin-bottom: 0; }
+    ul li strong { color: #93c5fd; }
+    .formula-block {
+      background: #1e293b;
+      border-radius: 6px;
+      padding: 22px 20px;
+      text-align: center;
+      margin: 10px 0 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .roi-label { font-size: 18px; color: #fff; font-weight: 700; }
+    .frac {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 14px;
+      color: #e2e8f0;
+      vertical-align: middle;
+    }
+    .frac .num {
+      border-bottom: 1.5px solid #e2e8f0;
+      padding: 0 8px 3px;
+    }
+    .frac .den { padding: 3px 8px 0; }
+    .roi-approx { font-size: 20px; color: #4ade80; font-weight: 800; }
+    .print-btn {
+      position: fixed; top: 20px; right: 20px;
+      background: #2563eb; color: #fff;
+      border: none; padding: 9px 20px; border-radius: 7px;
+      font-size: 13px; font-weight: 600; cursor: pointer;
+      box-shadow: 0 4px 12px rgba(37,99,235,0.4);
+    }
+    .print-btn:hover { background: #1d4ed8; }
+    @media print {
+      body { background: #fff; color: #000; }
+      .print-btn { display: none; }
+      thead tr { background: #1e3a8a !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      tbody tr { background: #f8fafc !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      tbody tr:nth-child(even) { background: #f1f5f9 !important; }
+      td { color: #000 !important; border-bottom: 1px solid #ccc !important; }
+      thead th { color: #fff !important; }
+      ul { background: #f8fafc !important; }
+      ul li { color: #000 !important; }
+      .formula-block { background: #f8fafc !important; }
+      .roi-label, .roi-approx { color: #000 !important; }
+      .frac { color: #000 !important; }
+      .frac .num { border-bottom-color: #000 !important; }
+      .section-title { color: #555 !important; }
+      .numbered-title { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">🖨️ Сохранить / Печать</button>
+
+<div class="page">
+
+  <h1>🛡️ TechnoFilter — Полный анализ проекта и экономического потенциала</h1>
+
+  <div class="section-title">Что на самом деле делает система (7 модулей)</div>
+  <table>
+    <thead><tr><th>Модуль</th><th>Описание</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Тендерный анализ</strong></td><td>AI-проверка спецификаций на коррупционные паттерны (XGBoost + NLP)</td></tr>
+      <tr><td><strong>Граф финансовых сетей</strong></td><td>D3.js визуализация потоков: Гос.орган → ТОО → Посредник → Офшор</td></tr>
+      <tr><td><strong>База юр. лиц (EntitiesDB)</strong></td><td>Все компании, госорганы, посредники, офшоры с рейтингом риска</td></tr>
+      <tr><td><strong>База физ. лиц (PersonsDB)</strong></td><td>Директора, учредители, родственники — связи между ними</td></tr>
+      <tr><td><strong>Расследования</strong></td><td>Система ведения дел (case management), добавление узлов, AI-отчёт</td></tr>
+      <tr><td><strong>Карта потоков</strong></td><td>Географическая визуализация денежных потоков (Казахстан + весь мир)</td></tr>
+      <tr><td><strong>Голосовой ИИ AURON</strong></td><td>Gemini 2.5 Flash Live — голосовой аналитик коррупционных схем</td></tr>
+    </tbody>
+  </table>
+
+  <div class="section-title">Масштаб охвата (из данных системы)</div>
+  <ul>
+    <li>Отслеживает потоки между <strong>12 городами Казахстана + 14 офшорными юрисдикциями</strong> (Дубай, Лондон, Цюрих, Кайманы, Сингапур, Панама…)</li>
+    <li>Сущности: Гос.органы, ТОО, Посредники, Офшоры, Физ. лица</li>
+    <li>Паттерны: откаты, обнал, карусели НДС, транзитные цепочки, фиктивные ТОО</li>
+    <li>Интеграция с <strong>goszakup.gov.kz</strong>, данные ИИН/БИН</li>
+  </ul>
+
+  <div class="section-title">Экономический потенциал (реальный, по всем модулям)</div>
+
+  <div class="numbered-title">1. Прямые потери от финансовой коррупции (не только закупки)</div>
+  <table>
+    <thead><tr><th>Сфера</th><th>Объём коррупции в Казахстане (оценка)</th></tr></thead>
+    <tbody>
+      <tr><td>Госзакупки (~5 трлн тенге/год)</td><td>500 млрд – 1 трлн потерь</td></tr>
+      <tr><td>Бюджетные субсидии (~3 трлн)</td><td>200–400 млрд потерь</td></tr>
+      <tr><td>Налоговые схемы (карусели НДС)</td><td>150–300 млрд потерь</td></tr>
+      <tr><td>Капитальное строительство</td><td>100–200 млрд потерь</td></tr>
+      <tr><td><b>Итого под контролем системы</b></td><td><b>~1–2 трлн тенге/год</b></td></tr>
+    </tbody>
+  </table>
+
+  <div class="numbered-title">2. Экономия при внедрении</div>
+  <table>
+    <thead><tr><th>Сценарий</th><th>Перехват</th><th>Ежегодная экономия</th></tr></thead>
+    <tbody>
+      <tr><td>Консервативный (пилот КГД + НАББ)</td><td>5% от потерь</td><td><b>50–100 млрд ₸</b></td></tr>
+      <tr><td>Реалистичный (3 госоргана)</td><td>15%</td><td><b>150–300 млрд ₸</b></td></tr>
+      <tr><td>Полное внедрение (Счётный комитет)</td><td>25–35%</td><td><b>250–700 млрд ₸</b></td></tr>
+    </tbody>
+  </table>
+
+  <div class="numbered-title">3. Операционная ценность</div>
+  <table>
+    <thead><tr><th>Параметр</th><th>Сейчас (вручную)</th><th>TechnoFilter</th></tr></thead>
+    <tbody>
+      <tr><td>Построение сети связей по делу</td><td>2–6 недель</td><td><b>&lt; 30 секунд</b></td></tr>
+      <tr><td>Выявление офшорных цепочек</td><td>Месяцы (MLAT запросы)</td><td><b>Мгновенно (по данным)</b></td></tr>
+      <tr><td>Стоимость 1 расследования</td><td>5–50 млн тенге</td><td><b>~500 тенге</b></td></tr>
+      <tr><td>Голосовой запрос аналитику</td><td>Невозможно</td><td><b>AURON (Gemini 2.5 Live)</b></td></tr>
+    </tbody>
+  </table>
+
+  <div class="section-title">ROI для государства</div>
+  <div class="formula-block">
+    <span class="roi-label">ROI =</span>
+    <span class="frac">
+      <span class="num">150,000,000,000 − 500,000,000</span>
+      <span class="den">500,000,000</span>
+    </span>
+    <span class="roi-approx">≈ 29,900%</span>
+  </div>
+
+  <div class="section-title">Коммерческий потенциал (SaaS/GovTech)</div>
+  <table>
+    <thead><tr><th>Рынок</th><th>Потенциал</th></tr></thead>
+    <tbody>
+      <tr><td>Казахстан (гос. лицензия)</td><td>$3–10 млн/год</td></tr>
+      <tr><td>Узбекистан, Кыргызстан, Таджикистан</td><td>$5–15 млн/год</td></tr>
+      <tr><td>Грузия, Армения (реформы по ЕС)</td><td>$2–5 млн/год</td></tr>
+      <tr><td>Международные организации (ООН, EBRD)</td><td>$10–30 млн грантов</td></tr>
+      <tr><td><b>Итого СНГ + международный рынок</b></td><td><b>$20–60 млн/год</b></td></tr>
+    </tbody>
+  </table>
+
+  <div class="section-title">Уникальные технические преимущества</div>
+  <ul>
+    <li><strong>Голосовой следователь AURON</strong> на Gemini 2.5 Flash (PCM16 @ 16kHz) — нет аналогов в СНГ</li>
+    <li><strong>D3.js + TopoJSON карта</strong> с реальными координатами КЗ/мир — визуальное доказательство схем</li>
+    <li><strong>SHAP explainability</strong> — объяснимые решения AI (требование регуляторов)</li>
+    <li><strong>Полный стек готов</strong>: FastAPI + React + XGBoost + Gemini + SQLAlchemy</li>
+    <li><strong>Многоязычность</strong>: русский, казахский, английский</li>
+  </ul>
+
+</div>
+</body>
+</html>

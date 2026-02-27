@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-kz-surface text-gray-100;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-kz-surface;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-kz-border rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-kz-panel border border-kz-border rounded-xl p-6 shadow-lg;
+  }
+
+  .btn-primary {
+    @apply bg-kz-blue hover:bg-kz-blue/80 text-white font-semibold px-6 py-2.5 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-kz-border hover:bg-gray-600 text-white font-medium px-4 py-2 rounded-lg transition-all duration-200;
+  }
+
+  .risk-badge {
+    @apply px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide;
+  }
+
+  .risk-low {
+    @apply bg-risk-low/20 text-risk-low border border-risk-low/30;
+  }
+
+  .risk-medium {
+    @apply bg-risk-medium/20 text-risk-medium border border-risk-medium/30;
+  }
+
+  .risk-high {
+    @apply bg-risk-high/20 text-risk-high border border-risk-high/30;
+  }
+
+  .risk-critical {
+    @apply bg-risk-critical/20 text-risk-critical border border-risk-critical/30 animate-pulse;
+  }
+
+  .input-field {
+    @apply bg-kz-surface border border-kz-border rounded-lg px-4 py-2.5 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-kz-blue focus:border-transparent transition-all;
+  }
+
+  .highlight-suspicious {
+    @apply bg-red-500/30 text-red-300 px-1 rounded border-b-2 border-red-500;
+  }
+}
+
+/* Gauge animation */
+@keyframes gauge-fill {
+  from {
+    stroke-dashoffset: 283;
+  }
+}
+
+.gauge-circle {
+  animation: gauge-fill 1.5s ease-out forwards;
+}
+
+/* Slide-in animation for panels */
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out forwards;
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out forwards;
+}
+
+/* Glow pulse for suspicious items */
+@keyframes glow-pulse {
+
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(239, 68, 68, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+  }
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* Beautiful draw-in animation for flow paths */
+@keyframes flowDash {
+  from {
+    stroke-dashoffset: var(--flow-length, 300);
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Animated dash for straight lines */
+@keyframes straightFlowDash {
+  to {
+    stroke-dashoffset: -32;
+  }
+}
+
+/* After draw-in, flow arcs animate continuously */
+@keyframes flowDashContinuous {
+  to {
+    stroke-dashoffset: -300;
+  }
+}
+
+/* ═══════════════════════════════════════
+   LIGHT THEME OVERRIDES (.theme-light on <html>)
+   ═══════════════════════════════════════ */
+.theme-light body {
+  @apply bg-slate-100 text-slate-800;
+}
+
+.theme-light aside {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+.theme-light .card,
+.theme-light [class*="bg-kz-panel"] {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  color: #1e293b;
+}
+
+.theme-light [class*="bg-kz-surface"] {
+  background-color: #f1f5f9 !important;
+}
+
+.theme-light [class*="bg-kz-navy"] {
+  background-color: #ffffff !important;
+}
+
+.theme-light [class*="border-kz-border"] {
+  border-color: #e2e8f0 !important;
+}
+
+.theme-light .text-gray-400,
+.theme-light .text-gray-500 {
+  color: #64748b !important;
+}
+
+.theme-light .text-gray-300 {
+  color: #475569 !important;
+}
+
+.theme-light .text-white {
+  color: #0f172a !important;
+}
+
+.theme-light main {
+  background-color: #f1f5f9;
+}
+
+.theme-light ::-webkit-scrollbar-track {
+  background-color: #f1f5f9;
+}
+
+.theme-light ::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+}
