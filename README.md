@@ -1,5 +1,6 @@
 <div align="center">
-** AI Anti-Corruption System **
+
+# AI Anti-Corruption System 
 
 # ⚖️ Hidden corruption in government spending — Kazakhstan Hackathon 2026
 </div>
