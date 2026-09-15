@@ -1,6 +1,7 @@
-# AI Anti-Corruption System
 <div align="center">
-# ⚖️ Hidden corruption in government spending — Kazakhstan Hackathon 2026|
+** AI Anti-Corruption System **
+
+# ⚖️ Hidden corruption in government spending — Kazakhstan Hackathon 2026
 </div>
 
 ![Python](https://img.shields.io/badge/python-3.11%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
